@@ -1,0 +1,148 @@
+
+[0;35m===== LOG FILE ANALYSIS REPORT =====[0m
+Log file                                : [0;32mapache_logs[0m
+Total lines analyzed                    : [0;32m10000[0m
+First timestamp                         : [0;32m17/May/2015:10:05:03[0m
+Last timestamp                          : [0;32m20/May/2015:21:05:15[0m
+
+[0;35m===== 1. REQUEST COUNTS =====[0m
+Total requests                          : [0;32m10000[0m
+GET requests                            : [0;32m9952[0m
+POST requests                           : [0;32m5[0m
+Other methods                           : [0;32m43[0m
+
+[0;35m===== 2. UNIQUE IP ADDRESSES =====[0m
+Total unique IP addresses               : [0;32m1753[0m
+
+Top 10 IPs with request counts:
+    482 66.249.73.135
+    364 46.105.14.53
+    357 130.237.218.86
+    273 75.97.9.59
+    113 50.16.19.13
+    102 209.85.238.199
+     99 68.180.224.225
+     84 100.43.83.137
+     83 208.115.111.72
+     82 198.46.149.143
+
+GET/POST counts per IP (Top 10):
+  66.249.73.135: GET= 482, POST=   0
+   46.105.14.53: GET= 364, POST=   0
+ 130.237.218.86: GET= 357, POST=   0
+     75.97.9.59: GET= 273, POST=   0
+    50.16.19.13: GET= 113, POST=   0
+ 209.85.238.199: GET= 102, POST=   0
+ 68.180.224.225: GET=  99, POST=   0
+  100.43.83.137: GET=  84, POST=   0
+ 208.115.111.72: GET=  83, POST=   0
+ 198.46.149.143: GET=  82, POST=   0
+
+[0;35m===== 3. FAILURE REQUESTS =====[0m
+Failed requests (4xx & 5xx)             : [0;32m220 (2.20%)[0m
+
+Failure status code breakdown:
+    213 404
+      3 500
+      2 416
+      2 403
+
+[0;35m===== 4. TOP USER =====[0m
+Most active IP (total requests):
+    482 66.249.73.135
+
+Most active IP for GET requests:
+    482 66.249.73.135
+
+Most active IP for POST requests:
+      3 78.173.140.106
+
+[0;35m===== 5. DAILY REQUEST AVERAGES =====[0m
+Requests per day:
+[17/May/2015 1632
+[18/May/2015 2893
+[19/May/2015 2896
+[20/May/2015 2579
+Average requests per day                : [0;32m2500.0[0m
+
+[0;35m===== 6. FAILURE ANALYSIS =====[0m
+Days with most failures (Top 5):
+[19/May/2015 66
+[18/May/2015 66
+[20/May/2015 58
+[17/May/2015 30
+
+[0;35m===== ADDITIONAL ANALYSIS =====[0m
+
+Requests by hour (all days):
+00:00-00:59:  361 requests
+01:00-01:59:  360 requests
+02:00-02:59:  365 requests
+03:00-03:59:  354 requests
+04:00-04:59:  355 requests
+05:00-05:59:  371 requests
+06:00-06:59:  366 requests
+07:00-07:59:  357 requests
+08:00-08:59:  345 requests
+09:00-09:59:  364 requests
+10:00-10:59:  443 requests
+11:00-11:59:  459 requests
+12:00-12:59:  462 requests
+13:00-13:59:  475 requests
+14:00-14:59:  498 requests
+15:00-15:59:  496 requests
+16:00-16:59:  473 requests
+17:00-17:59:  484 requests
+18:00-18:59:  478 requests
+19:00-19:59:  493 requests
+20:00-20:59:  486 requests
+21:00-21:59:  453 requests
+22:00-22:59:  346 requests
+23:00-23:59:  356 requests
+
+Busiest hours (Top 5):
+14 498
+15 496
+19 493
+20 486
+17 484
+
+Detailed status code breakdown:
+200 9126
+206 45
+301 164
+304 445
+403 2
+404 213
+416 2
+500 3
+
+Failure requests by hour (Top 5):
+23:00-23:59:   4 failures
+22:00-22:59:   8 failures
+21:00-21:59:   8 failures
+20:00-20:59:   4 failures
+19:00-19:59:  10 failures
+
+[0;35m===== ANALYSIS SUGGESTIONS =====[0m
+1. Failure Reduction:
+   - Investigate most common error codes (shown above)
+   - Check the days/hours with highest failure rates for patterns
+   - Review URLs returning errors for possible fixes
+
+2. Performance Optimization:
+   - Scale resources during peak hours (identified above)
+   - Implement caching for frequently accessed resources
+   - Optimize endpoints with many POST requests
+
+3. Security Considerations:
+   - Investigate IPs with many failed requests
+   - Monitor suspicious activity patterns
+   - Check for brute force attempts on POST endpoints
+
+4. General Improvements:
+   - Analyze traffic patterns to plan maintenance windows
+   - Implement monitoring for identified peak times
+   - Consider rate limiting for abusive IPs
+identified peak times
+   - Consider rate limiting for abusive IPs
